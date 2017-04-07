@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleLayout"
+            layout="@layout/custom_calendar_title_layout"/>
+
+        <include
+            android:id="@+id/weekLayout"
+            layout="@layout/custom_calendar_weeks_layout"/>
+
+        <LinearLayout
+            android:id="@+id/daysContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <include layout="@layout/roboto_calendar_week_1"/>
+
+            <include layout="@layout/roboto_calendar_week_2"/>
+
+            <include layout="@layout/roboto_calendar_week_3"/>
+
+            <include layout="@layout/roboto_calendar_week_4"/>
+
+            <include layout="@layout/roboto_calendar_week_5"/>
+
+            <include layout="@layout/roboto_calendar_week_6"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hours_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="6dp"
+        android:gravity="center_horizontal"
+        android:minWidth="80dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/upButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/day_selector"
+            android:padding="6dp"
+            android:rotation="270"
+            android:src="@drawable/ic_arrow"
+            android:tint="@android:color/black"/>
+
+        <ListView
+            android:id="@+id/hours_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@android:color/transparent"
+            android:visibility="gone"/>
+
+        <com.calanderview.datepickerlib.MaterialNumberPicker
+            android:id="@+id/hour_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:focusableInTouchMode="false"
+            app:npSeparatorColor="@color/black"
+            app:npTextColor="@color/black"
+            app:npTextSize="12sp"
+            app:npWrapValue="true"/>
+
+        <ImageButton
+            android:id="@+id/downButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/day_selector"
+            android:padding="6dp"
+            android:rotation="90"
+            android:src="@drawable/ic_arrow"
+            android:tint="@android:color/black"/>
+    </LinearLayout>
+</LinearLayout>

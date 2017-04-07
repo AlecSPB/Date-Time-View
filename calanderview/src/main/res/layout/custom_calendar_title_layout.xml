@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:clickable="true">
+
+    <ImageButton
+        android:id="@+id/leftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/day_selector"
+        android:padding="6dp"
+        android:rotation="180"
+        android:src="@drawable/ic_arrow"
+        android:tint="@android:color/black"/>
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/day_selector"
+        android:padding="6dp"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/ic_home"
+        android:tint="@android:color/black"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:orientation="horizontal">
+
+        <com.calanderview.datepickerlib.CustomSpinner
+            android:id="@+id/spinner_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"/>
+
+        <com.calanderview.datepickerlib.CustomSpinner
+            android:id="@+id/spinner_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dateTitle"
+        style="@style/CalendarView.MonthTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:tag="dateTitle"
+        android:text="MONTH 2014"
+        android:textAllCaps="true"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:id="@+id/rightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/day_selector"
+        android:padding="6dp"
+        android:src="@drawable/ic_arrow"
+        android:tint="@android:color/black"/>
+</LinearLayout>
