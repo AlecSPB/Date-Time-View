@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/spinner_controller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:clickable="true"
+        android:background="@drawable/day_selector"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_handler_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Data"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_arrow"
+            android:rotation="90"
+            android:tint="@android:color/black"/>
+    </LinearLayout>
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:background="@drawable/policy_holder_spinner_shape">-->
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:overlapAnchor="false"
+        android:overScrollMode="never"
+        android:entries="@array/months"
+        android:scrollbarFadeDuration="0"
+        android:layout_gravity="bottom" />
+
+
+    <!--</RelativeLayout>-->
+
+</LinearLayout>
